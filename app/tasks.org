@@ -1,0 +1,18 @@
+
+* TODO create a flask boilerplate app
+** DONE create .gitinore file
+** DONE package instead of a module
+** DONE replace raw SQL with SQLAlchemy
+** DONE Link users with entries
+** DONE Salt password
+** DONE Register
+** DONE Login
+** DONE Login with flask login
+** TODO Move config out of db.py
+** TODO Remember Me
+** TODO implement with flask blueprints
+** TODO Use bootstrap theme
+** TODO Write a README
+** TODO Unit tests all working and running
+** TODO set up with docker NGINX, uwsgi or gunicorn
+** TODO bower install bootstrap and jquery
