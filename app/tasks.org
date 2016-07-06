@@ -8,11 +8,24 @@
 ** DONE Register
 ** DONE Login
 ** DONE Login with flask login
-** TODO Move config out of db.py
-** TODO Remember Me
+** DONE Unit tests
+** DONE Move config out of db.py
+** DONE Use bootstrap theme
+** TODO Align register
+** TODO Improve text and title appearance
+** TODO fix flash message
+
+** DONE side-menu in own file
+** TODO permissions
 ** TODO implement with flask blueprints
-** TODO Use bootstrap theme
+
+** TODO Edit entries
+** TODO Delete entries
+** TODO Restful api
+** TODO Remember Me
+
+
 ** TODO Write a README
-** TODO Unit tests all working and running
+
 ** TODO set up with docker NGINX, uwsgi or gunicorn
 ** TODO bower install bootstrap and jquery

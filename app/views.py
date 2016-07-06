@@ -12,13 +12,14 @@ from flask_login import login_user, login_required, logout_user, current_user
 from sqlalchemy.exc import IntegrityError
 
 
-@app.route('/sed')
+@app.route('/index')
 def index():
-    return 'Hello World!'
+    error = None
+    return render_template('base.html', error=error)
 
 @app.route('/')
 def show_entries():
-    entries = Entries.query.all()
+    entries = Entries.query.order_by('id desc').all()
     return render_template('show_entries.html', entries=entries)
 
 
@@ -39,17 +40,23 @@ def add_entry():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
+    remember = False
     if request.method == 'POST':
         if request.form['username']:
             username = request.form['username']
         if request.form['password']:
             password = request.form['password']
-
+        try:
+            if request.form['remember']:
+                if request.form['remember'] == 'on':
+                    remember = True
+        except:
+            remember = False
         user = User.query.filter_by(username=username).first()
         if user:
             password_ok = user.check_password(password)
             if password_ok:
-                login_user(user)
+                login_user(user,remember=remember)
                 next = request.args.get('next')
                 session['logged_in'] = True
                 flash('You were logged in')

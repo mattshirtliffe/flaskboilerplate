@@ -1,0 +1,42 @@
+
+
+
+                         / Flask Boilerplate /
+
+                 a flask boilerplate application
+
+      1. Install virtual env
+
+      2. create virtualenv
+      virtualenv env
+      source env/bin/activate
+
+      3. install requirements
+      pip install -r requirements
+
+    ~ How do I use it?
+
+      4. edit the configuration in the flaskr.py file or
+         export an  environment variable
+         pointing to a configuration file.
+
+      5. Instruct flask to use the right application
+
+         export FLASK_APP=app.py
+         export FLASK_DEBUG=1
+
+      6. initialize the database with this command:
+
+         flask initdb
+
+      7. now you can run flaskr:
+
+         flask run
+
+         the application will greet you on
+         http://localhost:5000/
+
+    ~ Is it tested?
+
+      You betcha.  Run the `test_app.py` file to see
+      the tests pass.

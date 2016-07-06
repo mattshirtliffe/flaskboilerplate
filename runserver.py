@@ -1,13 +1,11 @@
-from app import app
-from app.models import User
-from app.models import Entries
-from app.db import db
 
+from app import app
+from app.db import db
+from app.models import User, Entries
 
 
 @app.cli.command('initdb')
 def initdb_command():
-
     print('Initialized the database.')
     db.create_all()
 
@@ -20,6 +18,9 @@ def create_entries():
     db.session.add(entry)
     db.session.commit()
     print 'done \n'
+
+
+
 
 
 
